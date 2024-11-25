@@ -10,9 +10,7 @@ Original file is located at
 import time
 
 def is_valid(board, row, col, num):
-    """
-    Verifica si un número puede colocarse en una celda del Sudoku sin violar las restricciones.
-    """
+   
     if num in board[row]:
         return False
 
@@ -28,9 +26,7 @@ def is_valid(board, row, col, num):
     return True
 
 def solve_sudoku(board):
-    """
-    Resuelve el Sudoku utilizando la técnica de backtracking.
-    """
+    
     for row in range(9):
         for col in range(9):
             if board[row][col] == 0:
@@ -44,9 +40,7 @@ def solve_sudoku(board):
     return True
 
 def print_board(board):
-    """
-    Imprime el tablero de Sudoku de forma legible.
-    """
+   
     for row in board:
         print(" ".join(str(num) if num != 0 else "." for num in row))
 
